@@ -1,0 +1,22 @@
+[user]
+	name = Juan Carlos Pazmino
+	email = juankpro@outlook.com
+[push]
+	default = simple
+[core]
+  editor = nvim
+	excludesfile = ~/.gitignore
+[alias]
+  aa      = add --all
+	st      = status
+	df      = diff
+	dc      = diff --cached
+	co      = checkout
+  lg      = log --oneline --decorate
+  am      = commit --amend
+  cim     = commit -m
+	br      = branch
+  last    = log -1 HEAD
+  unstage = reset HEAD --
+[rerere]
+	enabled = true
