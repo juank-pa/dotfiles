@@ -1,7 +1,6 @@
 set colorcolumn=100 " display vertical line at 100 chars
 set textwidth=100
 set cursorline      " show cursor position
-"#set mouse=""        " disable mouse
 set number          " display line numbers
 set wildmenu        " visual autocomplete for command menu
 set laststatus=2    " always show the status line
@@ -21,18 +20,20 @@ set directory=/tmp
 
 let g:mapleader=','
 
-for g:fpath in split(globpath('~/.config/nvim/pre-plugins', '*.vim'), '\n')
+map <c-p> :CtrlP<cr>
+
+for g:fpath in split(globpath('~/.config/vim/pre-plugins', '*.vim'), '\n')
   exe 'source' g:fpath
 endfor
 
-call g:plug#begin('~/.config/nvim/plugged')
+call g:plug#begin('~/.config/vim/plugged')
 
-if filereadable(expand('~/.config/nvim/plugins.vim'))
-  source ~/.config/nvim/plugins.vim
+if filereadable(expand('~/.config/vim/plugins.vim'))
+  source ~/.config/vim/plugins.vim
 endif
 
 call g:plug#end()
 
-for g:fpath in split(globpath('~/.config/nvim/post-plugins', '*.vim'), '\n')
+for g:fpath in split(globpath('~/.config/vim/post-plugins', '*.vim'), '\n')
   exe 'source' g:fpath
 endfor
